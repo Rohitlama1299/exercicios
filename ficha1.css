@@ -1,29 +1,52 @@
-	*{
-		margin:0;
-		padding:0;
-		font-family: 'Poppins', sans-serif;
-		box-sizing: border-box;
-		outline: none;
-		border: none;
-		text-decoration: none;
-		scroll-behavior: smooth;
-	} 
-	 #header{
-	 	background-image: url(backgrounds.jpeg);
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+
+	box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+} 
+body{
+    line-height: 1.6;
+}
+
+
+	 .header{
+	 	background-image: url(image/backgrounds.jpeg);
 	 	width: 100%;
 		height: 100vh;
 		background-size: cover;
 		background-position: center;
 
 	 }
-	  #cidades{
-	 	background-image: url(Cidades.jpeg);
+	  .cidades{
+	 	background-image: url(image/Cidades.jpeg);
 	 	width: 100%;
 		height: 100vh;
-		background-size: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
 		background-position: center;
-
 	 }
+	 .fauna{
+		background-image: url(image/faunas.jpeg);
+		width: 100%;
+	   height: 100vh;
+	   background-repeat: no-repeat;
+	   background-size: cover;
+	   background-position: center;
+	}
+
+	.flora{
+		background-image: url(image/flora.jpeg);
+		width: 100%;
+	   height: 100vh;
+	   background-repeat: no-repeat;
+	   background-size: cover;
+	   background-position: center;
+	}
 
 	 .header-text{
 		margin-top: 35%;
@@ -55,6 +78,17 @@
 	padding: 10px 5%;
 	}
 
+	.butt{
+		background-color: #fff;
+		color: white;
+		border:none;
+		border-radius: 20px;
+		padding: 5px 15px;
+		font-size: 25px;
+		min-height: 30px;
+		min-width: 120px;
+		margin-top: 10px;
+	}
 
 	nav{
 		display: flex;
@@ -67,15 +101,25 @@
 	display: inline-block;
 	list-style: none;
 	margin: 5px 20px;
-	
 	margin-top:45px
 	}
 	nav ul li a {
 	color: #fff;
 	text-decoration: none;
-	font-size: 18px;
-	position: right ;
+	font-size: 25px;
+	position: right;
 	}
+a {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+a:hover {
+  box-shadow: inset 100px 100px 100px 100px #54b3d6;
+  color: white;
+}
 
 
 	section {
@@ -87,13 +131,15 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-      
+      .sec{
+		margin-left:120px;
+	  }
       .box {
-        flex-basis: calc(25% - 20px);
+        flex-basis: calc(45% - 2px);
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-bottom: 40px;
-        padding: 20px;
+        
       }
       
       .box img {
@@ -112,5 +158,108 @@
         font-size: 14px;
         line-height: 1.5;
         color: #666;
-		text-align: justify;
+		text-align: left;
       }
+	  .about {
+		margin-top: 40px;
+		margin-left: 40px;
+		display: flex;
+		justify-content: space-between;
+		padding: 40px;
+		
+	  }
+	   .about .images{
+		width: 20%;
+        height: auto;
+	  }
+
+	  .text {
+		font-size: 20px;
+		padding-left: 20px;
+	  }
+	  footer {
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		padding: 20px;
+	  }
+	  /*************** Flora and fauna part ********************/
+	  .description{
+		margin :40px;
+		text-align: justify;
+		padding: 50px 20%;
+		position: center;
+		
+	  }
+	  .description h3{
+		font-size: 30px;
+		font-family: 'Courier New', Courier, monospace;
+	  }
+	  .description p{
+		padding: 10px;
+	  }
+	 
+	  /**********************    gallery     *******************/
+	img{
+		width: 100%;
+		display: block;
+	}
+	
+	.container{
+		width: 90vw;
+		margin: 0 auto;
+	}
+	.container h3{
+		font-size: 40px;
+		margin-bottom: 10px;
+		margin-left: 100px;
+		margin-bottom: 50px;
+	}
+	  
+	.section{
+		margin-top: -70px;
+		
+	}
+	.photo{
+		position: relative;
+		margin: 10px;
+	}
+	.content{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: #fff;
+		padding: 0px 0px;
+		background: rgba(0, 0, 0, 0.7);
+	}
+	.content h3{
+		font-size: 19px;
+		font-weight: 200;
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+	@media screen and (min-width: 800px){
+
+		/* section three */
+		.gallery{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+	}
+
+	@media screen and (min-width: 1200px){
+		/* footer */
+		.footer-container > div{
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		/* section three */
+		.gallery{
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
